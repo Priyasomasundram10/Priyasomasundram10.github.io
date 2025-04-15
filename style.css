@@ -1,3 +1,49 @@
+/* Define a basic fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply animation to sections */
+h2, p, ul {
+  animation: fadeIn 1s ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+h2 {
+  animation-delay: 0.3s;
+}
+
+p {
+  animation-delay: 0.5s;
+}
+
+ul {
+  animation-delay: 0.7s;
+}
+
+/* Add hover effect for skill list items */
+.skill-list li:hover {
+  color: #007BFF;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Animation for header */
+header {
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: 0.2s;
+}
+
+/* Add a slide-up effect for images (like charts or screenshots) */
+img {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
