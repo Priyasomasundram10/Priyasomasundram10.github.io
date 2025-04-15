@@ -44,45 +44,65 @@ img {
   animation-fill-mode: forwards;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+/* Style for the computer animation */
+.computer-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style for the computer */
+.computer {
+    width: 300px;
+    height: 200px;
+    background-color: #333;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for the screen */
+.screen {
+    width: 260px;
+    height: 150px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Add a typing effect */
+.typing p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
     color: #333;
     margin: 0;
-    padding: 0;
+    overflow: hidden; /* Ensures text appears one character at a time */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    border-right: 3px solid #333; /* Cursor effect */
+    width: 0;
+    animation: typing 3s steps(20) 1s forwards, blink 0.75s step-end infinite;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-h2 {
-    color: #333;
-}
-
-a {
-    color: #333;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+/* Blinking cursor effect */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
