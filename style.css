@@ -23,27 +23,6 @@ ul {
   animation-delay: 0.7s;
 }
 
-/* Add hover effect for skill list items */
-.skill-list li:hover {
-  color: #007BFF;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-/* Animation for header */
-header {
-  animation: fadeIn 1s ease-in-out;
-  animation-delay: 0.2s;
-}
-
-/* Add a slide-up effect for images (like charts or screenshots) */
-img {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s ease-in-out;
-  animation-fill-mode: forwards;
-}
-
 /* Style for the computer animation */
 .computer-animation {
     display: flex;
@@ -78,7 +57,7 @@ img {
 }
 
 /* Add a typing effect */
-.typing p {
+.typing {
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     color: #333;
